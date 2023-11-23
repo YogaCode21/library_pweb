@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+
+a {
+  color: var(--text-dark);
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100%;
+}
+
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+}
+
+:root {
+  --text-color:#F6F7F9;
+  --text-dark:#212428;
+  --background-color:#212428;
+  --primary-color:#00FF00;
+  --secondary-color: #313130;
+}
+
+.index-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.index-main .header {
+  margin: 50px 0;
+  color: var(--text-color);
+  text-align: center;
+}
+.index-main .header h1 a {
+  color: var(--text-color);
+  font-size: 64px;
+}
+.index-main .header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.index-main .header .search-bar {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.index-main .header .search-bar form {
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+.index-main .header .search-bar input[type=text] {
+  background-color: inherit;
+  padding: 10px 20px;
+  width: 100%;
+  border: 3px solid var(--primary-color);
+  border-radius: 8px;
+  outline: none;
+  color: var(--text-color);
+}
+.index-main .header .search-bar input[type=text]::-moz-placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+.index-main .header .search-bar input[type=text]::placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+.index-main .header .search-bar input[type=submit] {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--background-color);
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.index-main .header .pagination .pagination-item {
+  padding: 5px 15px;
+  margin: 0 5px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+}
+.index-main .book-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.index-main .book-container .book-item {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  color: white;
+  box-shadow: 0px -200px 146px 18px rgba(0, 0, 0, 0.75) inset, 0px 0px 5px 0px var(--primary-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 370px;
+  height: 500px;
+}
+.index-main .book-container .book-item .book-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.index-main .book-container .book-item .book-detail .status {
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--text-dark);
+  padding: 8px 15px;
+}
+.index-main .book-container .book-item .book-detail .ada {
+  background-color: var(--primary-color);
+}
+.index-main .book-container .book-item .book-detail .tidak {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+.index-main .book-container .book-item .book-detail .edit {
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 8px 15px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+.index-main .book-container .book-item .book-detail .detail {
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 8px 15px;
+  color: var(--text-dark);
+  background-color: var(--primary-color);
+}
+.index-main .book-container .book-item .book-detail .delete {
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 8px 15px;
+  color: var(--text-color);
+  background-color: crimson;
+}
+.index-main .book-container .book-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0px -200px 146px 18px rgba(0, 0, 0, 0.75) inset, 0px 0px 25px 0px var(--primary-color);
+}
+.index-main .book-container .new-book {
+  justify-content: center;
+  align-items: center;
+  font-size: 62px;
+  cursor: pointer;
+}
+
+.input-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+.input-main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-main form .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-main form h1 {
+  font-size: 24px;
+}
+.input-main form input[type=text], .input-main form textarea {
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: inherit;
+  border: 2px solid var(--primary-color);
+  outline: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+.input-main form input[type=text]:focus, .input-main form textarea:focus {
+  box-shadow: 0px 0px 10px 0px var(--primary-color);
+  transform: scale(1.03);
+}
+.input-main form input[type=text]::-moz-placeholder, .input-main form textarea::-moz-placeholder {
+  color: var(--text-color);
+}
+.input-main form input[type=text]::placeholder, .input-main form textarea::placeholder {
+  color: var(--text-color);
+}
+.input-main form .wrapper {
+  width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+.input-main form .wrapper .right-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.input-main form .wrapper .right-content textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  resize: none;
+}
+.input-main form .wrapper .right-content input[type=submit] {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+.input-main form .wrapper .right-content input[type=submit]:hover {
+  box-shadow: 0px 0px 10px 0px var(--primary-color);
+}
+.input-main form .wrapper .right-content select {
+  background-color: inherit;
+  font-weight: bold;
+  padding: 5px 10px;
+  width: 200px;
+  border-radius: 8px;
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+.input-main form .wrapper .right-content select option {
+  background-color: black;
+  color: white;
+}
+.input-main form .wrapper .right-content select:focus {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 10px 0px var(--primary-color);
+}
+.input-main form .wrapper .special {
+  flex-direction: column;
+  align-items: start;
+}
+.input-main #box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 450px;
+  border-radius: 30px;
+  background-color: inherit;
+  text-align: center;
+  line-height: 300px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px var(--primary-color);
+}
+.input-main #box:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 25px 0px var(--primary-color);
+}
+.input-main #boxText {
+  color: var(--text-color);
+  font-size: 200px;
+}
+
+.edit-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+.edit-main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.edit-main form .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.edit-main form h1 {
+  font-size: 24px;
+}
+.edit-main form input[type=text], .edit-main form textarea {
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: inherit;
+  border: 2px solid var(--primary-color);
+  outline: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+.edit-main form input[type=text]:focus, .edit-main form textarea:focus {
+  box-shadow: 0px 0px 10px 0px var(--primary-color);
+  transform: scale(1.03);
+}
+.edit-main form input[type=text]::-moz-placeholder, .edit-main form textarea::-moz-placeholder {
+  color: var(--text-color);
+}
+.edit-main form input[type=text]::placeholder, .edit-main form textarea::placeholder {
+  color: var(--text-color);
+}
+.edit-main form .wrapper {
+  width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+.edit-main form .wrapper .right-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.edit-main form .wrapper .right-content textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  resize: none;
+}
+.edit-main form .wrapper .right-content input[type=submit] {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+.edit-main form .wrapper .right-content input[type=submit]:hover {
+  box-shadow: 0px 0px 10px 0px var(--primary-color);
+}
+.edit-main form .wrapper .right-content select {
+  background-color: inherit;
+  font-weight: bold;
+  padding: 5px 10px;
+  width: 200px;
+  border-radius: 8px;
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+.edit-main form .wrapper .right-content select option {
+  background-color: black;
+  color: white;
+}
+.edit-main form .wrapper .right-content select:focus {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 10px 0px var(--primary-color);
+}
+.edit-main form .wrapper .special {
+  flex-direction: column;
+  align-items: start;
+}
+.edit-main #box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 450px;
+  border-radius: 30px;
+  background-color: inherit;
+  text-align: center;
+  line-height: 300px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px var(--primary-color);
+}
+.edit-main #box:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 25px 0px var(--primary-color);
+}
+.edit-main #boxText {
+  color: var(--text-color);
+  font-size: 200px;
+}
+
+.detail-main {
+  color: var(--text-color);
+}
+.detail-main .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+}
+.detail-main .wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.detail-main .wrapper .right {
+  max-width: 500px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.detail-main .wrapper a {
+  background-color: var(--primary-color);
+  padding: 10px 55px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.detail-main #box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 500px;
+  border-radius: 30px;
+  background-color: inherit;
+  text-align: center;
+  line-height: 300px;
+  cursor: pointer;
+  box-shadow: 0px -150px 146px 18px rgba(0, 0, 0, 0.75) inset, 0px 0px 10px 0px var(--primary-color);
+}
+.detail-main #box:hover {
+  transform: scale(1.03);
+  box-shadow: 0px -150px 146px 18px rgba(0, 0, 0, 0.75) inset, 0px 0px 25px 0px var(--primary-color);
+}
+.detail-main #boxText {
+  color: var(--text-color);
+  font-size: 200px;
+}/*# sourceMappingURL=global.css.map */
